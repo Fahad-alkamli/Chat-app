@@ -1,0 +1,86 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".welcomePage_Activity"
+    android:background="#fafafa">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/black_overlay"
+            style="?metaButtonBarStyle"
+            tools:ignore="UselessParent"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/registerButton"
+                android:textColor="#880e4f"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Register_button"
+                android:textStyle="bold"
+                style="?metaButtonBarButtonStyle"
+                android:textSize="20sp"
+                android:longClickable="false"
+                android:gravity="center"
+                android:onClick="register"
+                android:background="#80757575"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="?metaButtonBarStyle"
+            tools:ignore="UselessParent"
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/black_overlay"
+            android:gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="100dp">
+
+            <Button
+                style="?metaButtonBarButtonStyle"
+                android:id="@+id/loginButton"
+                android:textColor="#880e4f"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/login"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:longClickable="false"
+                android:gravity="center"
+                android:onClick="login"
+                android:background="#80757575"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Welcome !"
+            android:id="@+id/textView"
+            android:layout_gravity="left|top"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            android:textSize="45sp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="20dp" />
+    </FrameLayout>
+
+</FrameLayout>

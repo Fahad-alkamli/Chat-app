@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/addFromContacts"
+        android:title="Pick from Contacts"
+        />
+    <item
+        android:id="@+id/addByEmail"
+        android:title="Add by Email"
+        />
+
+
+</menu>

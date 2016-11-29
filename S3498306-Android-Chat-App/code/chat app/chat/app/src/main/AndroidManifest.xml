@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="alkamli.fahad.chat.chat">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Login_Activity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Register_Activity"
+            android:label="@string/title_activity_register"
+            android:theme="@style/FullscreenTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            />
+
+        <activity android:name=".homePage.home" />
+        <!-- http://stackoverflow.com/questions/1898886/removing-an-activity-frendship_key-the-history-stack -->
+        <activity android:name=".welcomePage_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".pickPhoneContact_Activity" />
+        <activity
+            android:name=".Chat.Chat_Template"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name=".settings.Settings" />
+        <activity android:name=".ChatSummaryTemplate" />
+
+        <service
+            android:name=".Services.FetchNewMessagesService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".adminControl.adminControlPanel" />
+        <activity android:name=".homePage.AddFriendbyEmail"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            ></activity>
+    </application>
+
+</manifest>

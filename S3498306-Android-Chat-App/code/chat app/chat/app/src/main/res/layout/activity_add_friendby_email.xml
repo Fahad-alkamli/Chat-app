@@ -1,0 +1,108 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register_Activity"
+
+    android:background="#fafafa">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:id="@+id/Content1"
+        >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            android:background="@color/black_overlay"
+            style="?metaButtonBarStyle"
+            tools:ignore="UselessParent"
+            android:gravity="bottom"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/registerButton"
+                android:textColor="#880e4f"
+                android:background="@color/black_overlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Invite friend"
+                android:textStyle="bold"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textSize="20sp"
+                android:longClickable="false"
+                android:gravity="center"
+                android:onClick="addFriend"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Content2"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="Friend Email Address"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginTop="80dp"
+            android:textColorHint="@color/primary_text"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:textSize="20sp"
+            android:textColor="@color/primary_text"
+
+            android:layout_gravity="center"
+            android:gravity="center_vertical|center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="We can't find a friend with this email"
+            android:textColor="@color/red"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:id="@+id/emailErrorTextView"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="We couldn't add a friend(Try again)"
+            android:textColor="@color/red"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:id="@+id/couldntAddFriend"
+            />
+
+    </LinearLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/loading"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+
+</FrameLayout>

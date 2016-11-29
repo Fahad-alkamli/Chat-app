@@ -1,0 +1,146 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register_Activity"
+
+    android:background="#fafafa">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:id="@+id/registerContent1"
+        >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            android:background="@color/black_overlay"
+            style="?metaButtonBarStyle"
+            tools:ignore="UselessParent"
+            android:gravity="bottom"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/registerButton"
+                android:textColor="#880e4f"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Register_button"
+                android:textStyle="bold"
+                style="?metaButtonBarButtonStyle"
+                android:textSize="20sp"
+                android:longClickable="false"
+                android:gravity="bottom|center_horizontal"
+android:onClick="createUser"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/registerContent2"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginTop="80dp"
+            android:textColorHint="@color/primary_text"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@color/primary_text"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="This Email already exists in the system"
+            android:id="@+id/emailTakenTextView"
+            android:textColor="@color/red"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginTop="25dp"
+            android:textColorHint="@color/primary_text"
+            android:typeface="serif"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Please type a Correct Password"
+            android:id="@+id/wrongPasswordTextView"
+            android:textColor="@color/red"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_phone"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginTop="25dp"
+            android:textColorHint="@color/primary_text"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@color/primary_text"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Please type a Correct Phone number"
+            android:id="@+id/wrongPhoneNumberTextView"
+            android:textColor="@color/red"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+</FrameLayout>

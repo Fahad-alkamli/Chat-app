@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Chat.Chat_Template"
+
+    >
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#332a27"
+        android:id="@+id/relativeLayout2">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@mipmap/ic_launcher"
+            android:id="@+id/picture_box"
+            android:layout_margin="7dp" />
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="25dp"
+            android:text="Fahad Alkamli"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/picture_box"
+            android:layout_marginStart="39dp"
+            android:textColor="@color/icons"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/friendTitle" />
+
+    </RelativeLayout>
+
+    <!-- Messages body -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/relativeLayout"
+        android:layout_above="@+id/sendMessageEditView"
+        android:layout_below="@+id/relativeLayout2">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:fillViewport="true">
+            <ListView
+                android:layout_width="match_parent"
+                android:id="@+id/messagesListView"
+                android:transcriptMode="alwaysScroll"
+                android:stackFromBottom="true"
+                android:layout_height="match_parent">
+            </ListView>
+        </ScrollView>
+    </RelativeLayout>
+
+    <!-- Type a message section -->
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/sendMessageEditView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:lines="2"
+        android:background="@color/black_overlay"
+        android:layout_toStartOf="@+id/sendMessageButton"
+        android:textColor="@color/icons"
+        android:paddingStart="10dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=">"
+        android:id="@+id/sendMessageButton"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary_dark"
+        android:textColor="@color/icons"
+        android:onClick="sendMessage"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
