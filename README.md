@@ -5,7 +5,7 @@ Please make sure you read the pdf file for help regarding implementing the resen
 
 I also added a video demo showing an interaction between two friends using the app.
 
-Problems Encounter:
+Problems Encountered:
 
 1-	Since I am using an endpoint API to fetch new messages I had to reduce the number of Http requests because android will crash my app when I set the interval to low number. 
 
